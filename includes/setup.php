@@ -22,7 +22,7 @@ function ju_setup_theme() {
 		// Create the custom image attachments used as post thumbnails for pages.
 		'attachments'               =>  array(
 			'image-about'           =>  array(
-				'post_title'        =>  __( 'About', 'udemy' ),
+				'post_title'        =>  __( 'About', 'wp' ),
 				'file'              =>  'assets/images/about/1.jpg', // URL relative to the template directory.
 			),
 		),
@@ -55,11 +55,11 @@ function ju_setup_theme() {
 
 		// Set the front page section theme mods to the IDs of the core-registered pages.
 		'theme_mods'                => array(
-			'ju_facebook_handle'    =>  'udemy',
-			'ju_twitter_handle'     =>  'udemy',
-			'ju_instagram_handle'   =>  'udemy',
-			'ju_email'              =>  'udemy',
-			'ju_phone_number'       =>  'udemy',
+			'ju_facebook_handle'    =>  'wp',
+			'ju_twitter_handle'     =>  'wp',
+			'ju_instagram_handle'   =>  'wp',
+			'ju_email'              =>  'wp',
+			'ju_phone_number'       =>  'wp',
 			'ju_header_show_search' =>  'yes',
 			'ju_header_show_cart'   =>  'yes',
 		),
@@ -68,7 +68,7 @@ function ju_setup_theme() {
 		'nav_menus'                 =>  array(
 			// Assign a menu to the "top" location.
 			'primary'               =>  array(
-				'name'              =>  __( 'Primary Menu', 'udemy' ),
+				'name'              =>  __( 'Primary Menu', 'wp' ),
 				'items'             =>  array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
@@ -79,7 +79,7 @@ function ju_setup_theme() {
 
 			// Assign a menu to the "social" location.
 			'secondary'             =>  array(
-				'name'              =>  __( 'Secondary Menu', 'udemy' ),
+				'name'              =>  __( 'Secondary Menu', 'wp' ),
 				'items'             =>  array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
