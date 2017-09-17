@@ -9,4 +9,5 @@ $wp_customize->add_panel( 'wp', array(
 ) );
 
     ju_social_customizer_section( $wp_customize );
+    ju_misc_customizer_section( $wp_customize );
 }

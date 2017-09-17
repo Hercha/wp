@@ -9,8 +9,21 @@
 			<div class="container clearfix">
 
 				<div class="col_half">
-					Copyrights &copy; 2017 All Rights Reserved by Jasko Koyn Inc.<br>
-					<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+					<?= get_theme_mod( 'ju_footer_copyright_text' ); ?><br>
+					<div class="copyright-links">
+						<?php
+						
+						if( get_theme_mod( 'ju_footer_tos_page' ) ) {
+							?><a href="<?php the_permalink(get_theme_mod( 'ju_footer_tos_page' )); ?>">Terms of Use</a><?php
+						}
+
+						if( get_theme_mod( 'ju_footer_privacy_page' ) ) {
+							?><a href="<?php the_permalink(get_theme_mod( 'ju_footer_privacy_page' )); ?>">Privacy Policy</a><?php
+						}
+						
+						?>
+						 
+					</div>
 				</div>
 
 				<div class="col_half col_last tright">
@@ -61,7 +74,7 @@
 
 					<?php
 
-					if( get_theme_mod( 'ju_email' ) ){
+					if( get_theme_mod( 'ju_phone_number' ) ){
 						?><i class="icon-call"></i> +<?php echo get_theme_mod( 'ju_phone_number' );
 					}
 
