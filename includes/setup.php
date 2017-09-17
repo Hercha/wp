@@ -90,7 +90,7 @@ function ju_setup_theme() {
 		),
 	);
 
-    add_theme_support( 'starter-content' );
+    add_theme_support( 'starter-content', $starter_content );
 
     register_nav_menu( 'primary', __('Primary Menu', 'wp') );
     register_nav_menu( 'secondary', __( 'Secondary Menu', 'wp' ) );
