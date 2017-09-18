@@ -23,6 +23,14 @@ function ju_misc_customizer_section( $wp_customize ) {
         'default'                   => 0,
     ));
 
+    $wp_customize->add_setting( 'ju_show_header_popular_posts_widget', array(
+        'default'                   => false
+    ));
+
+    $wp_customize->add_setting( 'ju_popular_posts_widget_title', array(
+        'default'                   => 'Breaking News'
+    ));
+
     $wp_customize->add_section( 'ju_misc_section', array(
         'title'                     => __( 'WP Misc Settings', 'wp' ),
         'priority'                  => 30,
@@ -86,6 +94,30 @@ function ju_misc_customizer_section( $wp_customize ) {
             'section'           => 'ju_misc_section',
             'settings'          => 'ju_footer_privacy_page',
             'type'              => 'dropdown-pages'
+        )
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'ju_show_header_popular_posts_widget_input',
+        array(
+            'label'             => __( 'Show Popular Posts', 'wp' ),
+            'section'           => 'ju_misc_section',
+            'settings'          => 'ju_show_header_popular_posts_widget',
+            'type'              => 'checkbox',
+            'choices'           => array(
+                'yes'           => __('Yes', 'wp')
+            )
+        )
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'ju_popular_posts_widget_title_input',
+        array(
+            'label'             => __( 'Popular Posts Title', 'wp' ),
+            'section'           => 'ju_misc_section',
+            'settings'          => 'ju_popular_posts_widget_title'
         )
     ));
 }
