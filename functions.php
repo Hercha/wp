@@ -24,6 +24,7 @@ add_action( 'customize_preview_init', 'ju_customize_preview_init'  );
 add_filter( 'bp_before_xprofile_cover_image_settings_parse_args', 'ju_xprofile_cover_image' );
 add_filter( 'bp_before_before_groups_cover_image_settings_parse_args', 'ju_xprofile_cover_image' );
 add_action( 'bp_setup_nav', 'ju_buddypress_profile_tabs' );
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );// Temorary fix of ob_end_flush(): failed to send buffer of zlib output compression (1) problem
 
 // Shortcodes
