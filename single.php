@@ -20,6 +20,7 @@
 
                         $author_ID              = get_the_author_meta( 'ID' );
                         $author_url             = get_author_posts_url( $author_ID );
+                        $twitter                = get_the_author_meta( 'ju_twitter', $author_ID );
 
                         ?>
 
@@ -116,6 +117,15 @@
                                     <?= get_avatar( $author_ID, 90, '', false, array( 'class' => 'img-circle' )); ?>
                                 </div>
                                 <?= nl2br(get_the_author_meta( 'description' )); ?>
+
+                                <?php
+                                
+                                if( $twitter ) {
+                                    echo '<p>Twitter: @<a href="https://twitter.com/' . $twitter . '">' . $twitter . '</a></p>';
+                                }
+
+                                ?>
+
                             </div>
                         </div><!-- Post Single - Author End -->
 

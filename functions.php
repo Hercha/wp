@@ -16,6 +16,8 @@ include( get_template_directory() . '/includes/functions.php' );
 include( get_template_directory() . '/includes/buddypress/profile-posts.php' );
 include( get_template_directory() . '/includes/woocommerce/checkout-fields.php' );
 include( get_template_directory() . '/includes/mobile.php' );
+include( get_template_directory() . '/includes/admin/author-fields.php' );
+include( get_template_directory() . '/includes/avatar.php' );
 
 // Hooks
 add_action( 'wp_enqueue_scripts', 'ju_enqueue' );
@@ -32,6 +34,11 @@ add_filter( 'woocommerce_shipping_fields', 'ju_wc_shipping_fields' );
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 add_filter( 'excerpt_more', '__return_false' );
 add_filter( 'excerpt_length', 'ju_excerpt_length', 999 );
+add_action( 'show_user_profile', 'ju_custom_user_profile_fields' );
+add_action( 'edit_user_profile', 'ju_custom_user_profile_fields' );
+add_action( 'personal_options_update', 'ju_save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'ju_save_extra_profile_fields' );
+add_action( 'avatar_defaults', 'ju_new_avatar' );
 remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );// Temorary fix of ob_end_flush(): failed to send buffer of zlib output compression (1) problem
 
 // Shortcodes
