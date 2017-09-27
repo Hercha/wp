@@ -10,6 +10,9 @@ function ju_setup_theme() {
 	add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio' ) );
 	add_theme_support( 'woocommerce' );
 
+	//Image Sizes
+	add_image_size( 'ju-post-image', 860, 575, false );
+
     // Define and register starter content to showcase the theme on new sites.
 	$starter_content                =   array(
 		'widgets'                   =>  array(

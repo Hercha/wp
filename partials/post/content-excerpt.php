@@ -66,7 +66,7 @@
         ?>
         <div class="entry-image">
             <a href="<?php the_permalink(); ?>" data-lightbox="image">
-                <?php the_post_thumbnail( 'full', array( 'class' => 'image_fade') ); ?>
+                <?php the_post_thumbnail( 'ju-post-image', array( 'class' => 'image_fade') ); ?>
             </a>
         </div>
         <?php

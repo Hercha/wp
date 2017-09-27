@@ -54,7 +54,7 @@
                                     ?>
                                     <div class="entry-image">
                                         <a href="<?php the_permalink(); ?>">
-                                            <?php the_post_thumbnail( 'full'); ?>
+                                            <?php the_post_thumbnail( 'ju-post-image'); ?>
                                         </a>
                                     </div>
                                     <?php
