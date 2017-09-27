@@ -1,4 +1,15 @@
 <?php get_header(); ?>
+
+<?php 
+
+//global $wp_filter, $wpdb;
+//echo '<pre>';
+// var_dump($wp_filter['wp_footer']);
+// print_r($wpdb->queries);
+// echo '</pre>';
+
+?>
+
 <!-- Content
 ============================================= -->
 <section id="content">
