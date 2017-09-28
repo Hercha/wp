@@ -11,7 +11,7 @@
 
 </head>
 
-<body <?php body_class('no-transition stretched'); ?>>
+<body <?php body_class('no-transition stretched'); ?> itemscope itemtype="http://schema.org/WebPage">
 
 <!-- Document Wrapper
 ============================================= -->
