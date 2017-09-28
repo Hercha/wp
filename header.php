@@ -3,7 +3,6 @@
 <head>
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<link rel="icon" type="image/png" href="images/favicon.png">
 	<!-- Stylesheets
 	============================================= -->
     <?php wp_head(); ?>

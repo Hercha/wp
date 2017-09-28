@@ -27,4 +27,6 @@ function ju_enqueue() {
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'ju_plugins' );
     wp_enqueue_script( 'ju_functions' );
+
+    if( is_singular() ) wp_enqueue_script( "comment-reply" );
 }

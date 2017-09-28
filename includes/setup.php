@@ -103,6 +103,8 @@ function ju_setup_theme() {
     if (function_exists('quads_register_ad')){
         quads_register_ad( array(
             'location' => 'wp_header', 'description' => 'WP Header position') );
-    }
+	}
+	
+	if( !isset( $content_width ) ) $cotent_width = 1200;
 
 }
